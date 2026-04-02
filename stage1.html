@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Stage 1ère année - Portfolio Schutz Lucas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">Schutz Lucas</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li class="dropdown">
+                    <a href="competences.html" class="dropbtn">Compétences <i class="fas fa-chevron-down"
+                            style="font-size: 0.7em; margin-left: 3px;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="competences.html">Mes Compétences</a>
+                        <a href="tableau.html">Tableau de Compétences</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="stage.html" class="dropbtn">Stage <i class="fas fa-chevron-down"
+                            style="font-size: 0.7em; margin-left: 3px;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="stage1.html">Stage 1ère année</a>
+                        <a href="stage2.html">Stage 2ème année</a>
+                    </div>
+                </li>
+                <li><a href="veille.html">Veille Technologique</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="section">
+            <a href="stage.html" class="btn-retour"><i class="fas fa-arrow-left"></i> Retour</a>
+            <h2 style="text-shadow: 0 0 16px rgba(0, 229, 255, 0.8);">Mon Stage 1ère année</h2>
+            <div class="stage-content">
+                
+                <!-- Presentation Organisme -->
+                <div class="portfolio-card" style="display: flex; gap: 2rem; align-items: center; flex-wrap: wrap;">
+                    <img src="images/lycée.jpg" alt="Logo du Lycée Frédéric Mistral" style="max-width: 150px; border-radius: 12px; border: 2px solid var(--accent-purple); box-shadow: 0 0 15px rgba(162, 0, 255, 0.4);">
+                    <div style="flex: 1; min-width: 250px;">
+                        <h3 style="color: var(--accent-color); font-size: 1.5rem; margin-top: 0; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 1px;">Lycée Frédéric Mistral</h3>
+                        <p style="margin-bottom: 0.5rem;"><i class="fas fa-building" style="color: var(--accent-purple); width: 25px;"></i> <strong>Secteur :</strong> Éducation nationale</p>
+                        <p style="margin-bottom: 0.5rem;"><i class="fas fa-map-marker-alt" style="color: var(--accent-pink); width: 25px;"></i> <strong>Localisation :</strong> Avignon</p>
+                        <p style="margin-bottom: 0.5rem;"><i class="fas fa-calendar-alt" style="color: var(--accent-green); width: 25px;"></i> <strong>Période :</strong> 2 juin 2025 - 27 juin 2025</p>
+                    </div>
+                </div>
+
+                <!-- Missions -->
+                <h3 style="margin-top: 3.5rem; margin-bottom: 1.5rem; color: var(--text-color); border-bottom: 2px solid var(--accent-purple); padding-bottom: 0.5rem; display: inline-block; font-size: 1.3rem;">
+                    <i class="fas fa-tasks" style="color: var(--accent-purple); margin-right: 10px;"></i>Missions Réalisées
+                </h3>
+                
+                <div class="portfolio-grid">
+                    <!-- Mission 1 -->
+                    <div class="portfolio-card">
+                        <i class="fas fa-network-wired" style="font-size: 2.5rem; margin-bottom: 1rem; display: block; color: var(--accent-color); text-shadow: 0 0 15px rgba(0, 229, 255, 0.6);"></i>
+                        <h4 style="font-size: 1.1rem; margin-bottom: 1rem; color: #fff;">Logiciel Veyon - Wake on Lan</h4>
+                        <p class="feature-desc">Récupération d'adresses IP et modification de la configuration d'amorçage pour démarrer les postes à distance (Wake on LAN). Reconstruction réseau virtuelle pour gestion centralisée.</p>
+                        <div class="veille-tags" style="margin-top: 1.5rem;">
+                            <span>Veyon</span>
+                            <span>Advanced IP Scanner</span>
+                            <span>Excel</span>
+                        </div>
+                    </div>
+
+                    <!-- Mission 2 -->
+                    <div class="portfolio-card">
+                        <i class="fas fa-server" style="font-size: 2.5rem; margin-bottom: 1rem; display: block; color: var(--accent-pink); text-shadow: 0 0 15px rgba(255, 43, 214, 0.6);"></i>
+                        <h4 style="font-size: 1.1rem; margin-bottom: 1rem; color: #fff;">Création de réseau temporaire</h4>
+                        <p class="feature-desc">Déploiement d'un réseau provisoire complet avec des postes fonctionnels pour une formation GRETA. Création des sessions utilisateurs dédiées dans l'annuaire Active Directory.</p>
+                        <div class="veille-tags" style="margin-top: 1.5rem;">
+                            <span>Active Directory</span>
+                            <span>Déploiement</span>
+                            <span>Réseau</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Competences -->
+                <h3 style="margin-top: 3.5rem; margin-bottom: 1.5rem; color: var(--text-color); border-bottom: 2px solid var(--accent-pink); padding-bottom: 0.5rem; display: inline-block; font-size: 1.3rem;">
+                    <i class="fas fa-brain" style="color: var(--accent-pink); margin-right: 10px;"></i>Compétences Acquises
+                </h3>
+                
+                <div class="veille-tags">
+                    <span style="font-size: 1rem; padding: 0.5rem 1rem; border-color: var(--accent-color); background: rgba(0, 229, 255, 0.1);">Communication</span>
+                    <span style="font-size: 1rem; padding: 0.5rem 1rem; border-color: var(--accent-color); background: rgba(0, 229, 255, 0.1);">Gestion des Réseaux</span>
+                    <span style="font-size: 1rem; padding: 0.5rem 1rem; border-color: var(--accent-purple); background: rgba(162, 0, 255, 0.1);">Déploiement d'infrastructure</span>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+
+    <footer>
+    </footer>
+</body>
+</html>
+
+
