@@ -1,0 +1,95 @@
+﻿I. Présentation du Projet GSB
+Le laboratoire Galaxy Swiss Bourdin (GSB) est issu d'une fusion entre l'américain Galaxy et l'européen Swiss Bourdin. Dans le cadre de la modernisation de l'activité de visite médicale, votre mission consiste à déployer l'infrastructure réseau et système des nouveaux locaux d'Avignon.
+L'objectif est de fournir un environnement segmenté, sécurisé et interconnecté pour les différents services de l'entreprise.
+
+
+II. Infrastructure Matérielle et Virtuelle
+1. Environnement de Virtualisation
+L'infrastructure repose sur deux serveurs Proxmox. Chaque hyperviseur héberge les machines virtuelles (VM) nécessaires au fonctionnement du site.
+Configuration des interfaces réseau (NICs) sur l'hyperviseur :
+* Carte 1 (WAN) : Accès vers l'extérieur et interconnexion des sites.
+* Carte 2 (LAN) : Support des différents segments VLAN internes.
+* Carte 3 (DMZ) : Zone isolée pour les services exposés (Serveur Web).
+2. Cœur de Réseau : pfSense
+Le pare-feu logiciel pfSense fait office de routeur principal. Il est connecté aux trois cartes réseaux virtuelles et porte les passerelles par défaut de chaque VLAN
+3. 2 Switch
+L'infrastructure utilise deux commutateurs physiques Cisco Catalyst 2960+ Series:
+* Équipements : Un commutateur de 24 ports et un second de 48 ports.
+* Configuration des VLANs : Chaque VLAN est configuré sur les deux commutateurs, avec au moins 4 ports attribués par VLAN sur chaque équipement.
+* Liaisons Trunk : Les deux derniers ports de chaque commutateur sont configurés en mode Trunk pour permettre le passage des flux inter-VLAN entre les équipements.
+* Administration : Après une configuration initiale par câble console, l'administration se fait désormais exclusivement via le protocole sécurisé SSH.
+* Rôles : Le premier commutateur (SWX.1) sert de commutateur principal, tandis que le second (SWX.2) assure la redondance.
+
+
+
+
+III. Architecture Réseau et Segmentation (VLAN)
+Le réseau global utilise l'adressage 172.24.0.0. La segmentation a été réalisée pour isoler les flux selon les besoins métiers :
+VLAN
+	Nom
+	Usage
+	Plage IP (Exemple)
+	10
+	Employés
+	Postes de travail standards
+	172.24.10.0/24
+	20
+	RH
+	Ressources Humaines (Données sensibles)
+	172.24.20.0/24
+	30
+	Direction
+	Direction du site d'Avignon
+	172.24.30.0/24
+	40
+	Serveurs
+	Contrôleur de domaine et serveurs internes
+	172.24.40.0/24
+	99
+	Management
+	Administration des équipements (Commutateurs, Bornes)
+	172.24.99.0/24
+	150
+	Wi-Fi
+	Accès sans fil pour les visiteurs
+	172.24.150.0/24
+	
+
+
+
+IV. Services Systèmes (Windows Server 2022)
+Chaque membre du binôme a déployé un serveur Windows Server 2022 configuré en tant que Contrôleur de Domaine (AD DS).
+1. Active Directory et Groupes
+La structure inclut les groupes d'utilisateurs requis pour la gestion des droits:
+* AdminsDomaine : Administrateurs de l'infrastructure.
+* OfficeUsers : Utilisateurs locaux d'Avignon.
+* GSBWorker : Employés globaux de l'entreprise.
+* Hello My Dir : Intégration de la solution d'authentification moderne.
+2. Services Réseau (DNS & DHCP)
+* DNS : Assure la résolution de noms pour le domaine local et l'accès au Wiki via wiki.GSBLocalX.
+* DHCP : Le serveur Windows distribue les adresses IP pour les VLANs 10, 20, 30 et 150.
+   * Note technique : Les 100 premières adresses de chaque VLAN sont réservées pour les futurs serveurs ou équipements statiques.
+
+
+V. Infrastructure Sans Fil (Wi-Fi)
+Le déploiement utilise une borne TP-Link EAP110.
+* Configuration physique : La borne est alimentée via un injecteur POE.
+* Configuration logique :
+   * SSID : GSBXX_Visiteurs (où XX est le numéro du local).
+   * VLAN dédié : Le trafic Wi-Fi est isolé dans le VLAN 150.
+   * SWITCH : branché sur un switch physique après configuration.
+
+
+
+
+VI. État de l'Interconnexion et Perspectives
+1. Communication Inter-sites
+Actuellement, les deux réseaux sont capables de communiquer. Les configurations de routage sur les pfSense permettent le transit des paquets entre les deux environnements 172.24.0.0 respectifs.
+
+
+
+
+Prochaines étapes
+* Mise en place de la réplication Active Directory entre les deux sites pour assurer la haute disponibilité.
+* Finalisation de la DMZ avec le déploiement du serveur MediaWiki.
+* Mise en place de règles adaptés dans le pfSense

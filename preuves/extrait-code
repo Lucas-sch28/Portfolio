@@ -1,0 +1,10 @@
+$users = Get-ADUser -Properties Company, Department, Title, MemberOf, DisplayName -Filter * -Server $AdServer
+
+$groups = Get-ADGroup -Properties * -Filter * -Server $AdServer
+
+$company = $users | Where Company | Sort Company | Select Company, Memberof | Group-object Company #| export-csv $companyCsv -NoTypeInformation -Delimiter ";"
+
+$department = $users | Where department | Sort department | Select department, Memberof #| export-csv $departmentCsv -NoTypeInformation -Delimiter ";"
+
+$title = $users | Where title | Sort title | Select title, Memberof #| export-csv $titleCsv -NoTypeInformation -Delimiter ";"
+

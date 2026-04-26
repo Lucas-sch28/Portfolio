@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Projets - Portfolio Schutz Lucas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">Schutz Lucas</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li class="dropdown">
+                    <a href="competences.html" class="dropbtn">Compétences <i class="fas fa-chevron-down"
+                            style="font-size: 0.7em; margin-left: 3px;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="competences.html">Mes Compétences</a>
+                        <a href="tableau.html">Tableau de Compétences</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="stage.html" class="dropbtn">Stage <i class="fas fa-chevron-down"
+                            style="font-size: 0.7em; margin-left: 3px;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="stage1.html">Stage 1ère année</a>
+                        <a href="stage2.html">Stage 2ème année</a>
+                    </div>
+                </li>
+                <li><a href="veille.html">Veille Technologique</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="section">
+            <h2>Mes Projets</h2>
+
+            <p
+                style="text-align: center; color: var(--text-dim); max-width: 800px; margin: 0 auto 3rem; font-size: 1.05rem;">
+                Explorez mes différentes réalisations à travers mon parcours professionnel et ma formation. Chaque
+                projet est une opportunité de mettre en pratique et d'étendre mes compétences en infrastructure réseau
+                et systèmes.
+            </p>
+
+            <div class="portfolio-grid"
+                style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem;">
+                <!-- Carte Entreprise -->
+                <div class="portfolio-card"
+                    style="display: flex; flex-direction: column; justify-content: space-between; position: relative;">
+                    <div
+                        style="position: absolute; top: 15px; right: 15px; background: rgba(162, 0, 255, 0.15); border: 1px solid rgba(162, 0, 255, 0.3); color: var(--accent-purple); border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 15px rgba(162, 0, 255, 0.4);">
+                        <i class="fas fa-building" style="font-size: 1.4rem; margin: 0; padding: 0; display: block; text-align: center;"></i>
+                    </div>
+
+                    <h3
+                        style="color: var(--text-color); margin-bottom: 1rem; font-size: 1.4rem; border-bottom: 1px solid rgba(0, 229, 255, 0.15); padding-bottom: 0.8rem;">
+                        Projets en Entreprise
+                    </h3>
+
+                    <p style="color: var(--text-dim); margin-bottom: 2rem; line-height: 1.6; font-size: 0.95rem;">
+                        Missions professionnelles, déploiements d'infrastructures réelles et automatisation. Une
+                        immersion totale dans les systèmes d'information d'entreprise avec un besoin constant de
+                        fiabilité et de sécurité.
+                    </p>
+
+                    <div class="skills-grid"
+                        style="grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)); gap: 1rem; margin-bottom: 2.5rem; background: rgba(0, 0, 0, 0.2); padding: 1.5rem; border-radius: 12px; border: 1px inset rgba(0, 229, 255, 0.1);">
+                        <div class="skill-item"
+                            style="padding: 1rem; background: transparent; box-shadow: none; border: none;"
+                            title="Windows Server"><i class="fab fa-windows" aria-hidden="true"
+                                style="font-size: 2rem;"></i></div>
+                        <div class="skill-item"
+                            style="padding: 1rem; background: transparent; box-shadow: none; border: none;"
+                            title="Infrastructure"><i class="fas fa-server" aria-hidden="true"
+                                style="font-size: 2rem; color: var(--accent-purple);"></i></div>
+                        <div class="skill-item"
+                            style="padding: 1rem; background: transparent; box-shadow: none; border: none;"
+                            title="Support IT"><i class="fas fa-headset" aria-hidden="true"
+                                style="font-size: 2rem; color: var(--accent-pink);"></i></div>
+                        <div class="skill-item"
+                            style="padding: 1rem; background: transparent; box-shadow: none; border: none;"
+                            title="PowerShell">
+                            <i class="fas fa-terminal" aria-hidden="true"
+                                style="font-size: 2rem; color: var(--accent-color);"></i>
+                        </div>
+                    </div>
+
+                    <a href="projet_entreprise.html" class="veille-link"
+                        style="margin-top: auto; display: inline-flex; justify-content: center; align-items: center; width: 100%; gap: 10px; background: linear-gradient(90deg, rgba(162, 0, 255, 0.15), rgba(0, 229, 255, 0.15)); padding: 0.8rem 1rem; border-radius: 8px; border: 1px solid rgba(0, 229, 255, 0.4); text-transform: uppercase; letter-spacing: 1px; font-weight: 700; transition: all 0.3s ease;">
+                        <i class="fas fa-rocket"></i> Découvrir les missions
+                    </a>
+                </div>
+
+                <!-- Carte LycÃ©e -->
+                <div class="portfolio-card"
+                    style="display: flex; flex-direction: column; justify-content: space-between; position: relative;">
+                    <div
+                        style="position: absolute; top: 15px; right: 15px; background: rgba(0, 229, 255, 0.15); border: 1px solid rgba(0, 229, 255, 0.3); color: var(--accent-color); border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 15px rgba(0, 229, 255, 0.4);">
+                        <i class="fas fa-graduation-cap" style="font-size: 1.4rem; margin: 0; padding: 0; display: block; text-align: center;"></i>
+                    </div>
+
+                    <h3
+                        style="color: var(--text-color); margin-bottom: 1rem; font-size: 1.4rem; border-bottom: 1px solid rgba(0, 229, 255, 0.15); padding-bottom: 0.8rem;">
+                        Projets au Lycée
+                    </h3>
+
+                    <p style="color: var(--text-dim); margin-bottom: 2rem; line-height: 1.6; font-size: 0.95rem;">
+                        Projets d'études, maquettes virtuelles et infrastructures simulées. Mise en pratique des
+                        concepts réseaux avancés, de la virtualisation haute disponibilité et du routage complexe.
+                    </p>
+
+                    <div class="skills-grid"
+                        style="grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)); gap: 1rem; margin-bottom: 2.5rem; background: rgba(0, 0, 0, 0.2); padding: 1.5rem; border-radius: 12px; border: 1px inset rgba(0, 229, 255, 0.1);">
+                        <div class="skill-item"
+                            style="padding: 1rem; background: transparent; box-shadow: none; border: none;"
+                            title="Proxmox / Virtualisation">
+                            <i class="fas fa-layer-group" aria-hidden="true"
+                                style="font-size: 2rem; color: #E57000;"></i>
+                        </div>
+                        <div class="skill-item"
+                            style="padding: 1rem; background: transparent; box-shadow: none; border: none;"
+                            title="Windows OS"><i class="fab fa-windows" aria-hidden="true"
+                                style="font-size: 2rem;"></i></div>
+                        <div class="skill-item"
+                            style="padding: 1rem; background: transparent; box-shadow: none; border: none;"
+                            title="Linux"><i class="fab fa-linux" aria-hidden="true"
+                                style="font-size: 2rem; color: var(--text-color);"></i></div>
+                        <div class="skill-item"
+                            style="padding: 1rem; background: transparent; box-shadow: none; border: none;"
+                            title="Réseau / Cisco">
+                            <i class="fas fa-network-wired" aria-hidden="true"
+                                style="font-size: 2rem; color: var(--accent-purple);"></i>
+                        </div>
+                    </div>
+
+                    <a href="réseau.html" class="veille-link"
+                        style="margin-top: auto; display: inline-flex; justify-content: center; align-items: center; width: 100%; gap: 10px; background: linear-gradient(90deg, rgba(0, 229, 255, 0.15), rgba(162, 0, 255, 0.15)); padding: 0.8rem 1rem; border-radius: 8px; border: 1px solid rgba(162, 0, 255, 0.4); text-transform: uppercase; letter-spacing: 1px; font-weight: 700; transition: all 0.3s ease;">
+                        <i class="fas fa-project-diagram"></i> Explorer mon projet final
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+    </footer>
+</body>
+
+</html>

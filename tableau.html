@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de Compétences - Portfolio Schutz Lucas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .competences-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            font-size: 0.9em;
+            background-color: #0c122a;
+            /* adapting to typical dark theme in portfolios */
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .competences-table th,
+        .competences-table td {
+            border: 1px solid rgba(0, 229, 255, 0.2);
+            padding: 12px;
+            text-align: left;
+        }
+
+        .competences-table th {
+            background-color: rgba(0, 229, 255, 0.1);
+            color: #00E5FF;
+            font-weight: 600;
+        }
+
+        .competences-table td.center {
+            text-align: center;
+            font-weight: bold;
+            color: #A200FF;
+        }
+
+        .section-header {
+            background-color: rgba(162, 0, 255, 0.1);
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .cv-content {
+            overflow-x: auto;
+        }
+
+        .table-header-info {
+            background: rgba(0, 229, 255, 0.05);
+            padding: 1rem;
+            border-left: 4px solid #00E5FF;
+            margin-bottom: 1.5rem;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .table-header-info p {
+            margin: 0.5rem 0;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">Schutz Lucas</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li class="dropdown">
+                    <a href="competences.html" class="dropbtn">Compétences <i class="fas fa-chevron-down"
+                            style="font-size: 0.7em; margin-left: 3px;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="competences.html">Mes Compétences</a>
+                        <a href="tableau.html">Tableau de Compétences</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="stage.html" class="dropbtn">Stage <i class="fas fa-chevron-down"
+                            style="font-size: 0.7em; margin-left: 3px;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="stage1.html">Stage 1ère année</a>
+                        <a href="stage2.html">Stage 2ème année</a>
+                    </div>
+                </li>
+                <li><a href="veille.html">Veille Technologique</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="section">
+            <a href="competences.html" class="btn-retour"><i class="fas fa-arrow-left"></i> Retour</a>
+            <h2>Tableau de Synthèse des Réalisations Professionnelles</h2>
+            <div class="cv-content">
+                <div class="table-header-info">
+                    <p><strong>BTS SERVICES INFORMATIQUES AUX ORGANISATIONS - SESSION 2026</strong></p>
+                    <p><strong>NOM et prénom :</strong> Schutz Lucas</p>
+                    <p><strong>Centre de formation :</strong> Lycée Théodore Aubanel (Spécialité : SISR)</p>
+                </div>
+
+                <table class="competences-table">
+                    <thead>
+                        <tr>
+                            <th>Réalisations professionnelles</th>
+                            <th>Période</th>
+                            <th>Gérer le patrimoine informatique</th>
+                            <th>Répondre aux incidents</th>
+                            <th>Développer la présence en ligne</th>
+                            <th>Travailler en mode projet</th>
+                            <th>Mettre à disposition un service</th>
+                            <th>Organiser son développement</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Réalisation en cours de formation -->
+                        <tr class="section-header">
+                            <td colspan="8">Réalisations en cours de formation</td>
+                        </tr>
+                        <tr>
+                            <td>Mini-projet avec une entreprise fictive</td>
+                            <td></td>
+                            <td class="center">X</td>
+                            <td class="center">X</td>
+                            <td class="center"></td>
+                            <td class="center">X</td>
+                            <td class="center">X</td>
+                            <td class="center">X</td>
+                        </tr>
+                        <tr>
+                            <td>Active Directory avec DNS, DHCP et Gpo</td>
+                            <td></td>
+                            <td class="center">X</td>
+                            <td class="center">X</td>
+                            <td class="center"></td>
+                            <td class="center">X</td>
+                            <td class="center">X</td>
+                            <td class="center">X</td>
+                        </tr>
+                        <tr>
+                            <td>Scripting et automatisation</td>
+                            <td></td>
+                            <td class="center"></td>
+                            <td class="center"></td>
+                            <td class="center"></td>
+                            <td class="center">X</td>
+                            <td class="center"></td>
+                            <td class="center">X</td>
+                        </tr>
+                        <tr>
+                            <td>Mise en place d'une borne wifi</td>
+                            <td></td>
+                            <td class="center"></td>
+                            <td class="center"></td>
+                            <td class="center"></td>
+                            <td class="center"></td>
+                            <td class="center">X</td>
+                            <td class="center"></td>
+                        </tr>
+                        <tr>
+                            <td>Création de site web</td>
+                            <td></td>
+                            <td class="center"></td>
+                            <td class="center"></td>
+                            <td class="center">X</td>
+                            <td class="center"></td>
+                            <td class="center">X</td>
+                            <td class="center">X</td>
+                        </tr>
+
+                        <!-- Première année -->
+                        <tr class="section-header">
+                            <td>Réalisations en milieu professionnel (1ère année)</td>
+                            <td>02/06/2025 au 27/02/2025</td>
+                            <td colspan="6"></td>
+                        </tr>
+                        <tr>
+                            <td>Mise en place et configuration d'appareils</td>
+                            <td></td>
+                            <td class="center">X</td>
+                            <td class="center"></td>
+                            <td class="center"></td>
+                            <td class="center"></td>
+                            <td class="center">X</td>
+                            <td class="center"></td>
+                        </tr>
+                        <tr>
+                            <td>Recensement du matériel informatique et de son état</td>
+                            <td></td>
+                            <td class="center">X</td>
+                            <td class="center"></td>
+                            <td class="center"></td>
+                            <td class="center"></td>
+                            <td class="center">X</td>
+                            <td class="center">X</td>
+                        </tr>
+                        <tr>
+                            <td>Administration d'un parc informatique virtuel (Veyon)</td>
+                            <td></td>
+                            <td class="center">X</td>
+                            <td class="center"></td>
+                            <td class="center"></td>
+                            <td class="center">X</td>
+                            <td class="center">X</td>
+                            <td class="center">X</td>
+                        </tr>
+                        <tr>
+                            <td>Dépannage et assistance aux utilisateurs</td>
+                            <td></td>
+                            <td class="center">X</td>
+                            <td class="center">X</td>
+                            <td class="center"></td>
+                            <td class="center"></td>
+                            <td class="center">X</td>
+                            <td class="center">X</td>
+                        </tr>
+
+                        <!-- Seconde année -->
+                        <tr class="section-header">
+                            <td>Réalisations en milieu professionnel (2ème année)</td>
+                            <td>05/01/2026 au 13/02/2026</td>
+                            <td colspan="6"></td>
+                        </tr>
+                        <tr>
+                            <td>Développement d'outils et scripts PowerShell</td>
+                            <td></td>
+                            <td class="center">X</td>
+                            <td class="center"></td>
+                            <td class="center"></td>
+                            <td class="center">X</td>
+                            <td class="center">X</td>
+                            <td class="center"></td>
+                        </tr>
+                        <tr>
+                            <td>Déploiement centralisé d'appareils Windows</td>
+                            <td></td>
+                            <td class="center">X</td>
+                            <td class="center"></td>
+                            <td class="center"></td>
+                            <td class="center">X</td>
+                            <td class="center">X</td>
+                            <td class="center"></td>
+                        </tr>
+                        <tr>
+                            <td>Support N1/N2 aux employés</td>
+                            <td></td>
+                            <td class="center">X</td>
+                            <td class="center">X</td>
+                            <td class="center"></td>
+                            <td class="center"></td>
+                            <td class="center"></td>
+                            <td class="center">X</td>
+                        </tr>
+                        <tr>
+                            <td>Maintenance de serveur</td>
+                            <td></td>
+                            <td class="center">X</td>
+                            <td class="center">X</td>
+                            <td class="center"></td>
+                            <td class="center"></td>
+                            <td class="center">X</td>
+                            <td class="center">X</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+    </footer>
+</body>
+
+</html>
